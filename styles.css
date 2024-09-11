@@ -1,0 +1,392 @@
+#canvas-image-blending {
+  position: absolute;
+  width: 100%;
+  height: 750px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  /* animation: scrollImage 10s linear infinite; */
+}
+
+.cover {
+  overflow: hidden;
+}
+
+
+/* @keyframes scrollImage {
+  0% {
+      top: 0;
+  }
+  50% {
+      top: -50%; 
+  }
+  100% {
+      top: 0; 
+  }
+} */
+
+/* .main-content {
+  padding: 5% 5%;
+} */
+
+.header {
+  display: flex;
+}
+
+.work-header {
+  display: flex;
+}
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3.0rem;
+  font-weight: 700;
+  color: black;
+}
+
+h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 2.0rem;
+  font-weight: 500;
+  color: black;
+  padding-top: 20px;
+}
+
+h3 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: black;
+  padding-bottom: 10px;
+}
+
+p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: black;
+}
+
+.time-text {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: black;
+}
+
+.header-text {
+  width: 80%
+}
+
+.header-image {
+  width: 65%;
+  height: 65%;
+}
+
+.col {
+  padding-bottom: 30px;
+}
+
+.rounded-corners {
+  border-radius: 20px;
+  height: 300px;
+}
+
+.title-image {
+  border-radius: 0px;
+  width: 80%;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 1% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 66%; /* Could be more or less, depending on screen size */
+  border-radius: 1%;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ul {
+  list-style-position: inside;
+  list-style-type: square;
+} */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-container-reverse {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  text-align: center;
+}
+
+.big-container-left {
+  flex: 70%;
+  padding: 10px;
+  text-align: left;
+}
+
+.small-container-right {
+  flex: 30%;
+  padding: 10px;
+  text-align: right;
+}
+
+.big-container-right {
+  flex: 70%;
+  padding: 10px;
+  text-align: left;
+}
+
+.small-container-left {
+  flex: 30%;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Contact me section */
+
+.fa {
+  padding: 2px;
+  font-size: 2.5em;
+  width: 20%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20%;
+  color: black;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* .fa-envelope {
+  background: #c05656;
+  color: white;
+}
+
+.fa-google {
+  background: #5d9cfa;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #1243ca;
+  color: white;
+}
+
+.fa-github {
+  background: #1a1b1b;
+  color: white;
+} */
+
+/* fa-scholar {
+  background: #f4b41a;
+  color: white;
+} */
+/* Styling for the progress bars */
+
+.progressbar {
+  height: 30px;
+  width: 20%;
+  background-color: #3D348B;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.inner-progressbar {
+  background-color: #7678ED;
+  height: 22px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-right: 4px;
+  color: white;
+  text-align: right;
+  font-size: 15px;
+}
+
+
+
+
+/* Tooltip container */
+.hover-text {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The tooltip box (hidden by default) */
+.hover-text .hover-content {
+  visibility: hidden;
+  width: 100%;
+  /* background-color: white; */
+  /* border: 2px solid #1e1d1d; */
+  text-align: center;
+  padding: 0px;
+  position: absolute;
+  z-index: 12;
+  /* bottom: 125%; Adjust this value to position the box */
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Display the tooltip content when hovering */
+.hover-text:hover .hover-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Image inside the hover box */
+.hover-content img {
+  width: 100%;
+  height: auto;
+}
+
+.inline_link {
+  color: rgb(36, 39, 134);
+  text-decoration: none;
+}
+
+.title {
+  color : black;
+}
+/* #gem {
+ color : black;
+}
+
+#gem:hover {
+  color: #3D348B;
+} */
+
+.nav {
+  background-color: #000000;
+  color: white;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
+
+.nav-link {
+  /* padding: 10px; */
+  color: white;
+  font-size: 20px;
+  
+}
+
+#artwork {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates responsive columns */
+  grid-gap: 5px; /* Adds space between images */
+}
+
+#art-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates responsive columns */
+  grid-gap: 5px; /* Adds space between images */
+  
+}
+
+.art-div {
+  position: relative;
+  padding-top: 100%; /* Make each div a square */
+  overflow: hidden; /* Hide overflow to crop images */
+  background-color: #f1f1f1;
+}
+
+.art-div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops the image */
+  transition: transform 0.2s ease-in-out;
+}
+
+.art-div img:hover {
+  transform: scale(1.04);  /* Slight zoom on hover */
+}
+
+.more-img-container img {
+  transition: transform 0.2s ease-in-out;
+}
+.more-img-container img:hover {
+  transform: scale(1.05);  /* Slight zoom on hover */
+}
+
+@media only screen and (max-width: 550px) and (min-width: 200px){
+  .container-fluid {
+    align-content: center;
+  }
+
+  .header {
+    display: inline;
+    align-items: center;
+  }
+
+  .progressbar {
+    width: 60%;
+  }
+
+  .flex-container-reverse {
+    flex-direction: column-reverse;
+  }
+  
+  .big-container-left, .small-container-right {
+    flex: 100%;
+  }
+
+  .small-container-right {
+    text-align: center;
+  }
+
+  .big-container-right, .small-container-left {
+    flex: 100%;
+  }
+
+  .small-container-left {
+    text-align: center;
+  }
+  
+}
+
