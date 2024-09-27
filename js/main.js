@@ -5,7 +5,7 @@ var textArray = [
   'I am a PhD candidate at Utrecht University.',
   'My research focuses on visualization for AI.',
   'I am also a gemologist and jewellery appraiser.',
-  'I love Art.',
+  'I like Art.',
 ];
 
 // Initialize Typewriter with loop
@@ -85,145 +85,145 @@ var granimInstance = new Granim({
     }
 });
 
+/////// see artwork.js
+// const art_container = document.getElementById('artwork');
+// // add all images in folder '/assets/artwork' to the art_container
+// dir_list = [
+//   // "assets/castal.jpg",
+//   "assets/artwork/seals/wangquanoj8k.png",
+//   "assets/artwork/AI_art/IMG_3540.JPEG",
+//   "assets/artwork/seals/yeyousuomeng.jpg",
+//   "assets/artwork/seals/xunsishi.jpg",
+//   "assets/artwork/seals/ChangShengBuLao.jpg",
+//   "assets/artwork/mokume/zoom.jpg",
+//   "assets/artwork/cube/main1.jpg",
+//   "assets/artwork/drawing/underlight.jpg",
+//   "assets/artwork/drawing/objects.png",
+//   "assets/artwork/metalcraft/unkown1.jpg",
+//   "assets/artwork/metalcraft/unkown3.jpg",
+//   "assets/artwork/metalcraft/warrior1.jpg",
+//   "assets/artwork/tag/onpants.jpg",
+//   "assets/artwork/others/seastar.jpg",
+//   "assets/artwork/others/decryptoart.PNG",
+//   "assets/artwork/others/gravity_3views.png",
+// ]
 
-const art_container = document.getElementById('artwork');
-// add all images in folder '/assets/artwork' to the art_container
-dir_list = [
-  // "assets/castal.jpg",
-  "assets/artwork/seals/wangquanoj8k.png",
-  "assets/artwork/AI_art/IMG_3540.JPEG",
-  "assets/artwork/seals/yeyousuomeng.jpg",
-  "assets/artwork/seals/xunsishi.jpg",
-  "assets/artwork/seals/ChangShengBuLao.jpg",
-  "assets/artwork/mokume/zoom.jpg",
-  "assets/artwork/cube/main1.jpg",
-  "assets/artwork/drawing/underlight.jpg",
-  "assets/artwork/drawing/objects.png",
-  "assets/artwork/metalcraft/unkown1.jpg",
-  "assets/artwork/metalcraft/unkown3.jpg",
-  "assets/artwork/metalcraft/warrior1.jpg",
-  "assets/artwork/tag/onpants.jpg",
-  "assets/artwork/others/seastar.jpg",
-  "assets/artwork/others/decryptoart.PNG",
-  "assets/artwork/others/gravity_3views.png",
-]
 
-
-function addImageToContainer(image_src, size = "col-md-3", container = art_container) {
-  // Create a div with the specified size and the 'art-div' class
-  const art_div = document.createElement('div');
-  art_div.className = 'art-div btn';
+// function addImageToContainer(image_src, size = "col-md-3", container = art_container) {
+//   // Create a div with the specified size and the 'art-div' class
+//   const art_div = document.createElement('div');
+//   art_div.className = 'art-div btn';
   
-  // Create an img element, set its source and add the appropriate classes
-  const img = document.createElement('img');
-  img.src = image_src;
-  img.className = 'img-fluid art-img'; // img-fluid is a Bootstrap class for responsive images
+//   // Create an img element, set its source and add the appropriate classes
+//   const img = document.createElement('img');
+//   img.src = image_src;
+//   img.className = 'img-fluid art-img'; // img-fluid is a Bootstrap class for responsive images
   
-  // Append the image to the art_div and then append the div to the container
-  art_div.appendChild(img);
-  container.appendChild(art_div);
+//   // Append the image to the art_div and then append the div to the container
+//   art_div.appendChild(img);
+//   container.appendChild(art_div);
 
-  // Add an event listener to the image to open a modal when clicked
-  art_div.addEventListener('click', () => {
-    // Get the modal element with the same name as the image
-    const modal = document.getElementById(`modal${image_src.split("/").slice(-1)[0].split(".")[0]}`);
-    modal.style.display = "block";
-  });
-}
+//   // Add an event listener to the image to open a modal when clicked
+//   art_div.addEventListener('click', () => {
+//     // Get the modal element with the same name as the image
+//     const modal = document.getElementById(`modal${image_src.split("/").slice(-1)[0].split(".")[0]}`);
+//     modal.style.display = "block";
+//   });
+// }
 
 
-// add the modal for each image, just a enlarged view of the image
-function addModalToContainer(image_src, container = art_container) {
-  // Create a modal div with the specified size and the 'modal' class
-  const modal = document.createElement('div');
-  modal.className = 'modal';
-  modal.id = `modal${image_src.split("/").slice(-1)[0].split(".")[0]}`;
+// // add the modal for each image, just a enlarged view of the image
+// function addModalToContainer(image_src, container = art_container) {
+//   // Create a modal div with the specified size and the 'modal' class
+//   const modal = document.createElement('div');
+//   modal.className = 'modal';
+//   modal.id = `modal${image_src.split("/").slice(-1)[0].split(".")[0]}`;
   
-  // Create a div for the modal content
-  const modal_content = document.createElement('div');
-  modal_content.className = 'modal-content';
-  modal_content.style = "text-align: center;";
+//   // Create a div for the modal content
+//   const modal_content = document.createElement('div');
+//   modal_content.className = 'modal-content';
+//   modal_content.style = "text-align: center;";
   
-  // Create an img element, set its source and add the appropriate classes
-  const img = document.createElement('img');
-  img.src = image_src;
-  img.className = 'img-fluid'; // img-fluid is a Bootstrap class for responsive images
+//   // Create an img element, set its source and add the appropriate classes
+//   const img = document.createElement('img');
+//   img.src = image_src;
+//   img.className = 'img-fluid'; // img-fluid is a Bootstrap class for responsive images
 
   
-  //// Create a span element with the class 'closeModal
-  // const span = document.createElement('span');
-  // span.className = 'closeModal';
-  // span.innerHTML = '&times;';
+//   //// Create a span element with the class 'closeModal
+//   // const span = document.createElement('span');
+//   // span.className = 'closeModal';
+//   // span.innerHTML = '&times;';
 
-  // Append the image and span to the modal content and then append the content to the modal
-  // modal_content.appendChild(span);
-  modal_content.appendChild(img);
-  modal.appendChild(modal_content);
+//   // Append the image and span to the modal content and then append the content to the modal
+//   // modal_content.appendChild(span);
+//   modal_content.appendChild(img);
+//   modal.appendChild(modal_content);
 
-  // Append the modal to the container
-  container.appendChild(modal);
+//   // Append the modal to the container
+//   container.appendChild(modal);
 
-  // Add an event listener to the span to close the modal when clicked
-  // span.addEventListener('click', () => {
-  //   modal.style.display = "none";
-  // });
+//   // Add an event listener to the span to close the modal when clicked
+//   // span.addEventListener('click', () => {
+//   //   modal.style.display = "none";
+//   // });
 
-  // Add an event listener to the modal to close it when clicked outside of the modal
-  modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-      stopVideo(modal);
-    }
-  });
-}
-
-
-// Assuming dir_list is an array of image paths
-dir_list.forEach(image_src => addImageToContainer(image_src));
-// Assuming dir_list is an array of image paths
-dir_list.forEach(image_src => addModalToContainer(image_src));
+//   // Add an event listener to the modal to close it when clicked outside of the modal
+//   modal.addEventListener('click', (event) => {
+//     if (event.target === modal) {
+//       modal.style.display = "none";
+//       stopVideo(modal);
+//     }
+//   });
+// }
 
 
-/// write a special modal for the modaldecryptoart and overwrite the above function
-
-// Create a modal div with the specified size and the 'modal' class
-const decryptoart_modal = document.getElementById('modaldecryptoart').getElementsByClassName('modal-content')[0];
-const intro_decryptoart = document.createElement('div');
-// intro_decryptoart.className = 'modal-content';
-// remove the original content
-decryptoart_modal.innerHTML = "";
-intro_decryptoart.innerHTML = `
-  <video autoplay muted class="AssetMedia--video" controls controlslist="nodownload" loop playsinline 
-       poster="https://i.seadn.io/gae/DhCMLwf9nLHyi6fItPevwMHkt5XI5NL_NS_CabqiQCRAHhy2PrD-tmCnlinMmURXDifk146YUmpO86qMDsigUSSLU_zgqiwEnL6MkMA?w=500&auto=format" 
-       preload="metadata" style="width: 100%; height: auto;">
-    <source src="https://openseauserdata.com/files/473b22ee19a4b9eb23a59368c6b6b36c.mp4#t=0.001" type="video/mp4">
-    <source src="your-fallback-video.webm" type="video/webm">
-    Your browser does not support the video tag.
-</video>
-    <h2>Decrypto Art</h2>
-    <h2></h2>
-    <p><strong>Creation Date:</strong> March 16, 2021</p>
-    <p>This piece was created during the height of interest in crypto art, a form of digital expression secured by cryptographic technology. But what truly defines crypto art? In this work, I use two paper clips to pick a physical lock—a metaphor for the act of breaking through barriers and accessing hidden value. Just as a cryptographic key unlocks ownership of digital assets, the paper clips symbolize an unconventional approach to revealing what’s secured. After uploading this artwork to the blockchain as an NFT, a deeper question arises: does this transformation make it crypto art because it exists within a digital ledger, or is it decryption art, unlocking new ways to interpret and access value?</p>
-
-    <p><strong>Link to NFT:</strong> 
-        <a href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/85338033498794955317087390683198712353501472751027363964759608170044358393857" target="_blank">
-            View NFT on OpenSea
-        </a>
-    </p>
-
-`;
-decryptoart_modal.appendChild(intro_decryptoart);
+// // Assuming dir_list is an array of image paths
+// dir_list.forEach(image_src => addImageToContainer(image_src));
+// // Assuming dir_list is an array of image paths
+// dir_list.forEach(image_src => addModalToContainer(image_src));
 
 
+// /// write a special modal for the modaldecryptoart and overwrite the above function
 
-// Create a function to stop the video
-function stopVideo(modal) {
-  const video = modal.querySelector('video');
-  if (video) {
-    video.pause();
-    video.currentTime = 0; // Reset video to the start
-  }
-}
+// // Create a modal div with the specified size and the 'modal' class
+// const decryptoart_modal = document.getElementById('modaldecryptoart').getElementsByClassName('modal-content')[0];
+// const intro_decryptoart = document.createElement('div');
+// // intro_decryptoart.className = 'modal-content';
+// // remove the original content
+// decryptoart_modal.innerHTML = "";
+// intro_decryptoart.innerHTML = `
+//   <video autoplay muted class="AssetMedia--video" controls controlslist="nodownload" loop playsinline 
+//        poster="https://i.seadn.io/gae/DhCMLwf9nLHyi6fItPevwMHkt5XI5NL_NS_CabqiQCRAHhy2PrD-tmCnlinMmURXDifk146YUmpO86qMDsigUSSLU_zgqiwEnL6MkMA?w=500&auto=format" 
+//        preload="metadata" style="width: 100%; height: auto;">
+//     <source src="https://openseauserdata.com/files/473b22ee19a4b9eb23a59368c6b6b36c.mp4#t=0.001" type="video/mp4">
+//     <source src="your-fallback-video.webm" type="video/webm">
+//     Your browser does not support the video tag.
+// </video>
+//     <h2>Decrypto Art</h2>
+//     <h2></h2>
+//     <p><strong>Creation Date:</strong> March 16, 2021</p>
+//     <p>This piece was created during the height of interest in crypto art, a form of digital expression secured by cryptographic technology. But what truly defines crypto art? In this work, I use two paper clips to pick a physical lock—a metaphor for the act of breaking through barriers and accessing hidden value. Just as a cryptographic key unlocks ownership of digital assets, the paper clips symbolize an unconventional approach to revealing what’s secured. After uploading this artwork to the blockchain as an NFT, a deeper question arises: does this transformation make it crypto art because it exists within a digital ledger, or is it decryption art, unlocking new ways to interpret and access value?</p>
+
+//     <p><strong>Link to NFT:</strong> 
+//         <a href="https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/85338033498794955317087390683198712353501472751027363964759608170044358393857" target="_blank">
+//             View NFT on OpenSea
+//         </a>
+//     </p>
+
+// `;
+// decryptoart_modal.appendChild(intro_decryptoart);
+
+
+
+// // Create a function to stop the video
+// function stopVideo(modal) {
+//   const video = modal.querySelector('video');
+//   if (video) {
+//     video.pause();
+//     video.currentTime = 0; // Reset video to the start
+//   }
+// }
 
 
 //BUTTON 1

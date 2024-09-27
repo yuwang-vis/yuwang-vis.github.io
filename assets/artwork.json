@@ -16,33 +16,92 @@
     },
 
     {
-        "id": "2",
-        "title": "",
-        "date": "",
-        "medium": "",
+        "id": "7",
+        "title": "Generative Emojis",
+        "date": "Mar. 2021",
+        "medium": "AI generated",
         "size": "",
-        "description": "",
+        "description": "I trained a styleGAN2 model on a dataset of public emojis. Then I let the model generate new emojis. ",
         "notes": "",
-        "cover": "assets/artwork/drawing/underlight.jpg",
-        "main": "",
-        "url": "",
+        "cover": "assets/artwork/AI_art/emoji_cover.png",
+        "main": "assets/artwork/AI_art/emoji_main.jpg",
+        "url": "https://opensea.io/collection/fake-emojis",
         "type": "image",
         "more_img": []
     },
+
     {
-        "id": "3",
-        "title": "",
+        "id": "6",
+        "title": "How AI understands ART",
+        "date": "Feb. 2021",
+        "medium": "AI generated",
+        "size": "",
+        "description": "I trained a styleGAN2 model on a dataset of artworks from the MoMA collection. Then I let the model generate new artworks. ",
+        "notes": "",
+        "cover": "assets/artwork/AI_art/MOMA_cover.png",
+        "main": "assets/artwork/AI_art/MOMA.jpg",
+        "url": "https://opensea.io/collection/art-itself",
+        "type": "image",
+        "more_img": []
+    },
+
+
+    {
+        "id": "10",
+        "title": "Gravity",
         "date": "",
-        "medium": "",
+        "medium": "3D Modeling",
         "size": "",
         "description": "",
         "notes": "",
-        "cover": "assets/artwork/drawing/objects.png",
-        "main": "",
+        "cover": "assets/artwork/others/gravity_rendered.png",
+        "main": "assets/artwork/others/gravity_3views.png",
         "url": "",
         "type": "image",
         "more_img": []
     },
+
+
+
+    {
+        "id": "8",
+        "title": "A brooch",
+        "date": "",
+        "medium": "silver, brass",
+        "size": "",
+        "description": "I mounted a gemstone, fully encased in metal.",
+        "notes": "",
+        "cover": "assets/artwork/metalcraft/unkown3.jpg",
+        "main": "assets/artwork/metalcraft/unkown1.jpg",
+        "url": "",
+        "type": "image",
+        "more_img": [ "assets/artwork/metalcraft/unkown3.jpg",
+     "assets/artwork/metalcraft/unkown2.jpg"   
+    ]
+    },
+
+    {
+        "id": "12",
+        "title": "Seals",
+        "date": "",
+        "medium": "Seal cutting",
+        "size": "",
+        "description": "",
+        "notes": "",
+        "cover": "assets/artwork/seals/ChangShengBuLao.jpg",
+        "main": "",
+        "url": "",
+        "type": "image",
+        "more_img": [
+            "assets/artwork/seals/xunsishi.jpg",
+            "assets/artwork/seals/wangquanoj8k.png",
+            "assets/artwork/seals/weiwu.jpg",
+            "assets/artwork/seals/pegion.jpg"
+
+        ]
+    },
+
+
     {
         "id": "4",
         "title": "Cube",
@@ -65,197 +124,92 @@
 
         ]
     },
-    {
-        "id": "5",
-        "title": "Track the Great Wall",
-        "date": "",
-        "medium": "",
-        "size": "",
-        "description": "",
-        "notes": "",
-        "cover": "assets/artwork/greatWall/main.jpg",
-        "main": "",
-        "url": "",
-        "type": "image",
-        "more_img": []
-    },
-    {
-        "id": "6",
-        "title": "",
-        "date": "",
-        "medium": "",
-        "size": "",
-        "description": "",
-        "notes": "",
-        "cover": "",
-        "main": "",
-        "url": "",
-        "type": "image",
-        "more_img": []
-    },
-    {
-        "id": "7",
-        "title": "",
-        "date": "",
-        "medium": "",
-        "size": "",
-        "description": "",
-        "notes": "",
-        "cover": "",
-        "main": "",
-        "url": "",
-        "type": "image",
-        "more_img": []
-    },
-    {
-        "id": "8",
-        "title": "",
-        "date": "",
-        "medium": "",
-        "size": "",
-        "description": "",
-        "notes": "",
-        "cover": "",
-        "main": "",
-        "url": "",
-        "type": "image",
-        "more_img": []
-    },
-    {
-        "id": "9",
-        "title": "",
-        "date": "",
-        "medium": "",
-        "size": "",
-        "description": "",
-        "notes": "",
-        "cover": "",
-        "main": "",
-        "url": "",
-        "type": "image",
-        "more_img": []
-    },
-    {
-        "id": "10",
-        "title": "",
-        "date": "",
-        "medium": "",
-        "size": "",
-        "description": "",
-        "notes": "",
-        "cover": "",
-        "main": "",
-        "url": "",
-        "type": "image",
-        "more_img": []
-    },
+
     {
         "id": "11",
-        "title": "",
+        "title": "Starfish",
         "date": "",
         "medium": "",
         "size": "",
-        "description": "",
+        "description": "Learning from Esher's work",
         "notes": "",
-        "cover": "",
+        "cover": "assets/artwork/others/seastar.jpg",
         "main": "",
         "url": "",
         "type": "image",
         "more_img": []
     },
-    {
-        "id": "12",
-        "title": "",
-        "date": "",
-        "medium": "",
-        "size": "",
-        "description": "",
-        "notes": "",
-        "cover": "",
-        "main": "",
-        "url": "",
-        "type": "image",
-        "more_img": []
-    },
+
+
+
+
+
     {
         "id": "13",
+        "title": "Tag for myself",
+        "date": "",
+        "medium": "",
+        "size": "",
+        "description": "",
+        "notes": "",
+        "cover":  "assets/artwork/tag/display1.jpg",
+        "main": "assets/artwork/tag/onpants.jpg",
+        "url": "",
+        "type": "image",
+        "more_img": [
+
+        ]
+    },
+
+    
+    {
+        "id": "3",
         "title": "",
         "date": "",
         "medium": "",
         "size": "",
         "description": "",
         "notes": "",
-        "cover": "",
+        "cover": "assets/artwork/drawing/objects.png",
         "main": "",
         "url": "",
         "type": "image",
         "more_img": []
     },
+
     {
-        "id": "14",
-        "title": "",
+        "id": "9",
+        "title": "Mokume-gane",
         "date": "",
-        "medium": "",
+        "medium": "silver, copper",
         "size": "",
         "description": "",
         "notes": "",
-        "cover": "",
-        "main": "",
+        "cover": "assets/artwork/mokume/ring1.jpg",
+        "main": "assets/artwork/mokume/zoom.jpg",
         "url": "",
         "type": "image",
-        "more_img": []
+        "more_img": [
+            "assets/artwork/mokume/material1.jpg",
+            "assets/artwork/mokume/step.jpg",
+            "assets/artwork/mokume/material3.jpg",
+            "assets/artwork/mokume/cut.jpg",
+            "assets/artwork/mokume/ring2.jpg",
+            "assets/artwork/mokume/bracelet1.jpg"
+
+
+        ]
     },
+
     {
-        "id": "15",
+        "id": "2",
         "title": "",
-        "date": "",
+        "date": "2014",
         "medium": "",
         "size": "",
         "description": "",
         "notes": "",
-        "cover": "",
-        "main": "",
-        "url": "",
-        "type": "image",
-        "more_img": []
-    },
-    {
-        "id": "16",
-        "title": "",
-        "date": "",
-        "medium": "",
-        "size": "",
-        "description": "",
-        "notes": "",
-        "cover": "",
-        "main": "",
-        "url": "",
-        "type": "image",
-        "more_img": []
-    },
-    {
-        "id": "17",
-        "title": "",
-        "date": "",
-        "medium": "",
-        "size": "",
-        "description": "",
-        "notes": "",
-        "cover": "",
-        "main": "",
-        "url": "",
-        "type": "image",
-        "more_img": []
-    },
-    {
-        "id": "18",
-        "title": "",
-        "date": "",
-        "medium": "",
-        "size": "",
-        "description": "",
-        "notes": "",
-        "cover": "",
+        "cover": "assets/artwork/drawing/underlight.jpg",
         "main": "",
         "url": "",
         "type": "image",

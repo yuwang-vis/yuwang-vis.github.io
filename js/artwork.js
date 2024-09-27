@@ -2,7 +2,7 @@
 fetch('assets/artwork.json')
   .then(response => response.json())
   .then(data => {
-    console.log('Data loaded:', data);
+    // console.log('Data loaded:', data);
     data.forEach(item => {
         addCoverToContainer(item);
         addModalToContainer(item);     
@@ -42,7 +42,7 @@ function addModalToContainer(item, container = artContainer) {
   const modal_content = document.createElement('div');
   modal_content.className = 'modal-content';
 
-  console.log(item);
+  // console.log(item);
 
   // the main image or video
   let main1
@@ -63,7 +63,7 @@ function addModalToContainer(item, container = artContainer) {
   main1 = document.createElement('img');
   main1.className = 'img-fluid';
     }
-    console.log(main1);
+    // console.log(main1);
 
   if (item.main) {
     main1.src = item.main;
@@ -88,13 +88,13 @@ function addModalToContainer(item, container = artContainer) {
 
   if (item.medium) {
     const material = document.createElement('p');
-    material.innerHTML = `<strong>${item.material}</strong> `;
+    material.innerHTML = `<p>${item.medium}</p> `;
     intro.appendChild(material);
   }
 
   if (item.size) {
     const size = document.createElement('p');
-    size.innerHTML = `<strong>${item.size}</strong> `;
+    size.innerHTML = `<p>${item.size}</p> `;
     intro.appendChild(size);
   }
 
