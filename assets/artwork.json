@@ -16,6 +16,43 @@
     },
 
     {
+        "id": "0",
+        "title": "Generative Rings",
+        "date": "Nov. 2021",
+        "medium": "AI generated",
+        "size": "",
+        "description": "I trained a styleGAN3 model on a dataset of a lot of rings. Then I let the model generate new rings. ",
+        "notes": "",
+        "cover": "assets/artwork/rings/cover.png",
+        "main": "assets/artwork/rings/video4.mp4",
+        "url": "",
+        "type": "video",
+        "more_img": [
+            "assets/artwork/rings/1.png",
+            "assets/artwork/rings/2.png",
+            "assets/artwork/rings/3.png",
+            "assets/artwork/rings/4.png",
+            "assets/artwork/rings/5.png",
+            "assets/artwork/rings/6.png",
+            "assets/artwork/rings/7.png",
+            "assets/artwork/rings/8.png",
+            "assets/artwork/rings/9.png",
+            "assets/artwork/rings/10.png",
+            "assets/artwork/rings/11.png",
+            "assets/artwork/rings/12.png",
+            "assets/artwork/rings/13.png",
+            "assets/artwork/rings/14.png",
+            "assets/artwork/rings/15.png",
+            "assets/artwork/rings/16.png",
+            "assets/artwork/rings/17.png",
+            "assets/artwork/rings/18.png",
+            "assets/artwork/rings/19.png",
+            "assets/artwork/rings/20.png",
+            "assets/artwork/rings/21.png"
+        ]
+    },
+
+    {
         "id": "7",
         "title": "Generative Emojis",
         "date": "Mar. 2021",
@@ -199,21 +236,7 @@
 
 
         ]
-    },
-
-    {
-        "id": "2",
-        "title": "",
-        "date": "2014",
-        "medium": "",
-        "size": "",
-        "description": "",
-        "notes": "",
-        "cover": "assets/artwork/drawing/underlight.jpg",
-        "main": "",
-        "url": "",
-        "type": "image",
-        "more_img": []
     }
+
   ]
   
