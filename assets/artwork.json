@@ -216,6 +216,40 @@
 
     {
         "id": "9",
+        "title": "Recreate 'Bonjour, Monsieur Courbet'",
+        "date": "",
+        "medium": "",
+        "size": "",
+        "description": "",
+        "notes": "",
+        "cover": "assets/artwork/drawing/recreate.jpg",
+        "main": "",
+        "url": "",
+        "type": "image",
+        "more_img": [
+                    ]
+    },
+
+    {
+        "id": "14",
+        "title": "Landscape Painting",
+        "date": "",
+        "medium": "streaky pork",
+        "size": "",
+        "description": "",
+        "notes": "",
+        "cover": "assets/artwork/color(pork)/main1.jpg",
+        "main": "",
+        "url": "",
+        "type": "image",
+        "more_img": [
+            "assets/artwork/color(pork)/display.jpg"
+
+        ]
+    },
+
+    {
+        "id": "17",
         "title": "Mokume-gane",
         "date": "",
         "medium": "silver, copper",
@@ -236,6 +270,38 @@
 
 
         ]
+    },
+
+    {
+        "id": "15",
+        "title": "",
+        "date": "",
+        "medium": "",
+        "size": "",
+        "description": "",
+        "notes": "",
+        "cover": "assets/artwork/drawing/underlight.jpg",
+        "main": "",
+        "url": "",
+        "type": "image",
+        "more_img": [
+                    ]
+    },
+
+    {
+        "id": "16",
+        "title": "",
+        "date": "",
+        "medium": "",
+        "size": "",
+        "description": "",
+        "notes": "",
+        "cover": "assets/artwork/drawing/hydrant.png",
+        "main": "",
+        "url": "",
+        "type": "image",
+        "more_img": [
+                    ]
     }
 
   ]
