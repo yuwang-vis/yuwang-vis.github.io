@@ -2,7 +2,7 @@ var typeWriterElement = document.getElementById('app');
 
 // List of strings to display in turn
 var textArray = [
-  'I am a PhD candidate at Utrecht University.',
+  'I am a computers scientist.',
   'My research focuses on visualization for AI.',
   'I am also a gemologist and jewellery appraiser.',
   'I like Art.',
