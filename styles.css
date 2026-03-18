@@ -15,6 +15,7 @@
 }
 
 :root {
+  --nav-anchor-offset: 40px;
   --research-bg: #f3f4f5;
   --research-panel: #fcfcfb;
   --research-border: rgba(26, 27, 27, 0.1);
@@ -22,6 +23,17 @@
   --research-accent: #4f5b66;
   --research-accent-soft: #edf0f2;
   --research-text-soft: #646d76;
+}
+
+html {
+  scroll-padding-top: var(--nav-anchor-offset);
+}
+
+#about,
+#research,
+#publications,
+#artwork-title {
+  scroll-margin-top: var(--nav-anchor-offset);
 }
 
 
@@ -604,6 +616,10 @@ p {
 }
 
 @media only screen and (max-width: 550px) and (min-width: 200px){
+  :root {
+    --nav-anchor-offset: 120px;
+  }
+
   .container-fluid {
     align-content: center;
   }
