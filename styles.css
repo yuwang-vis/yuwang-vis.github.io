@@ -206,6 +206,10 @@ p {
   flex-direction: column;
 }
 
+.research-card-accent {
+  background: linear-gradient(180deg, #fff6ef 0%, #fffdfa 100%);
+}
+
 .research-media {
   width: 100%;
   aspect-ratio: 16 / 10;
@@ -295,6 +299,18 @@ p {
 
 .research-link-button-secondary:hover {
   color: #191919;
+}
+
+.research-icon-block {
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1b1b1b 0%, #77503c 100%);
+  color: white;
+  font-size: 1.8rem;
 }
 
 .research-modal-content {
