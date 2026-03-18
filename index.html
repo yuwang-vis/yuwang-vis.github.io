@@ -89,48 +89,131 @@
             </div> <!-- col-md-4 -->
           </div>  <!-- row -->
 
-        <h2 style="padding-bottom: 20px" id="research">Research</h2>
-        
-        <div class="row">
-          <div class="col-md-9">
-            <h5>Inverse Projection and Decision Maps</h5>
-
-            <ul>
-              <li><strong>Projections</strong>:
-                <ul>
-                  <li>A projection reduces high-dimensional data to lower dimensions, mapping data from \( \mathbb{R}^n \) to \( \mathbb{R}^q \), often using \( q = 2 \) for visualization purposes (e.g., 2D scatterplots).</li>
-                  <li>Different projection techniques preserve data relationships with varying levels of computational speed and noise robustness.</li>
-                </ul>
-              </li>
-              <li><strong>Inverse Projections</strong>:
-                <ul>
-                  <li>Inverse projections attempt to reverse the mapping of a projection, approximating the original high-dimensional data from its low-dimensional representation in \( \mathbb{R}^q \).</li>
-                  <li>They are generally more complex due to the non-injective nature of projections and are used in tasks like data imputation and shape morphing.</li>
-                </ul>
-              </li>
-              <li><strong>Decision Maps</strong>:
-                <ul>
-                  <li>Decision maps visually represent the decision boundaries of machine learning models by coloring pixels in a 2D space, showing how models categorize data points.</li>
-                  <li>They are helpful in understanding model behavior and decision boundaries in explainable AI.</li>
-                </ul>
-              </li>
-            </ul>
-            
-            <a href="https://wuyuyu1024.github.io/web_dm/ ">Try Decision Map</a> (recommend using Chrome, Edge, or Chromium for WebGPU support)
-
-          </div>
-          <div class="col-md-3">
-            <!-- <img src="assets/research/nninv.png" class="img-fluid"> -->
-            <img src="assets/research/decision map.png" class="img-fluid btn" id="workflow-img">
+        <section id="research" class="research-section">
+          <div class="row g-4 align-items-stretch research-hero">
+            <div class="col-lg-7">
+              <div class="research-panel research-panel-copy">
+                <p class="research-eyebrow">Research</p>
+                <h2 class="research-title">Visual analytics for high-dimensional data and machine learning</h2>
+                <p class="research-lead">I build methods and interfaces that make embeddings, inverse projections, and classifier behavior easier to inspect instead of treating them as black boxes.</p>
+                <p>Most of my work sits between dimensionality reduction, explainable AI, and interactive systems. The projects below are pulled from repos in this workspace and extend the publication list with code, demos, and research tooling that can be explored directly.</p>
+                <div class="research-pill-row">
+                  <span class="research-pill">Inverse projections</span>
+                  <span class="research-pill">Decision maps</span>
+                  <span class="research-pill">Interactive ML systems</span>
+                  <span class="research-pill">Research software</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <button
+                class="research-panel research-diagram-card js-research-modal"
+                type="button"
+                data-modal-src="assets/research/decision map.png"
+                data-modal-alt="General workflow figure for decision map techniques"
+                data-modal-caption='General workflow of decision map techniques. Figure from <a href="http://webspace.science.uu.nl/~telea001/uploads/PAPERS/Inf23/paper.pdf" target="_blank" rel="noopener noreferrer">Wang et al., 2023</a>.'
+              >
+                <img src="assets/research/decision map.png" class="img-fluid" alt="General workflow figure for decision map techniques">
+                <span class="research-diagram-caption">Decision-map workflow figure. Click to enlarge.</span>
+              </button>
+            </div>
           </div>
 
+          <div class="research-grid-heading">
+            <h3>Selected Research Software</h3>
+            <p>Recent repos that connect papers, prototypes, and deployable demos.</p>
+          </div>
 
-        
+          <div class="research-grid">
+            <article class="research-card">
+              <div class="research-media">
+                <img src="assets/research/browser-decision-map-demo.gif" alt="Browser decision map demo showing MNIST embedding and inverse projection previews">
+              </div>
+              <div class="research-card-body">
+                <p class="research-card-kicker">Browser demo</p>
+                <h4>Browser Decision Map</h4>
+                <p>Browser-native MNIST demo that loads TensorFlow.js models client-side, renders decision regions over the embedding, and lets users probe inverse projections directly in the map.</p>
+                <div class="research-tag-row">
+                  <span class="research-tag">TensorFlow.js</span>
+                  <span class="research-tag">D3</span>
+                  <span class="research-tag">WebGPU</span>
+                  <span class="research-tag">MNIST</span>
+                </div>
+                <div class="research-links">
+                  <a class="research-link-button" href="https://wuyuyu1024.github.io/web_dm/" target="_blank" rel="noopener noreferrer">Try demo</a>
+                  <a class="research-link-button research-link-button-secondary" href="https://github.com/wuyuyu1024/browser-decision-map" target="_blank" rel="noopener noreferrer">View repo</a>
+                </div>
+              </div>
+            </article>
 
+            <article class="research-card">
+              <div class="research-media">
+                <video autoplay muted loop playsinline preload="metadata" poster="assets/research/lcip-poster.jpg">
+                  <source src="assets/research/lcip-demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="research-card-body">
+                <p class="research-card-kicker">Research software</p>
+                <h4>LCIP</h4>
+                <p>Controllable inverse projection system for high-dimensional image data. LCIP adds a user-controlled latent direction so exploration is not limited to a single fixed reconstruction surface.</p>
+                <div class="research-tag-row">
+                  <span class="research-tag">PyTorch</span>
+                  <span class="research-tag">PySide6</span>
+                  <span class="research-tag">StyleGAN2</span>
+                  <span class="research-tag">Visual analytics</span>
+                </div>
+                <div class="research-links">
+                  <a class="research-link-button" href="https://arxiv.org/pdf/2602.11141" target="_blank" rel="noopener noreferrer">Read paper</a>
+                  <a class="research-link-button research-link-button-secondary" href="https://github.com/wuyuyu1024/lcip" target="_blank" rel="noopener noreferrer">View repo</a>
+                </div>
+              </div>
+            </article>
 
+            <article class="research-card">
+              <div class="research-media research-media-soft">
+                <img src="assets/research/nninv.png" alt="Inverse projection illustration">
+              </div>
+              <div class="research-card-body">
+                <p class="research-card-kicker">Python package</p>
+                <h4>InverseProjections</h4>
+                <p>Reusable toolkit for inverse projection workflows, collecting NNinv, iLAMP, RBF interpolation, multilateration-based inversion, and gradient-map analysis behind a consistent API.</p>
+                <p class="research-inline-code"><code>pip install inverse-projections</code></p>
+                <div class="research-tag-row">
+                  <span class="research-tag">Python</span>
+                  <span class="research-tag">PyTorch</span>
+                  <span class="research-tag">scikit-learn</span>
+                  <span class="research-tag">Gradient maps</span>
+                </div>
+                <div class="research-links">
+                  <a class="research-link-button" href="https://github.com/wuyuyu1024/InverseProjections" target="_blank" rel="noopener noreferrer">View repo</a>
+                  <a class="research-link-button research-link-button-secondary" href="http://webspace.science.uu.nl/~telea001/uploads/PAPERS/EuroVA24/paper.pdf" target="_blank" rel="noopener noreferrer">Related paper</a>
+                </div>
+              </div>
+            </article>
 
-
-
+            <article class="research-card research-card-accent">
+              <div class="research-card-body">
+                <div class="research-icon-block" aria-hidden="true">
+                  <i class="fa fa-comments-o"></i>
+                </div>
+                <p class="research-card-kicker">Research communication</p>
+                <h4>RAG Thesis System</h4>
+                <p>A FastAPI-based companion for my Utrecht University PhD thesis that combines hybrid retrieval, optional reranking, and citation-aware answer generation to make the thesis queryable through a chat interface.</p>
+                <div class="research-tag-row">
+                  <span class="research-tag">FastAPI</span>
+                  <span class="research-tag">ChromaDB</span>
+                  <span class="research-tag">Hybrid retrieval</span>
+                  <span class="research-tag">LLM interface</span>
+                </div>
+                <div class="research-links">
+                  <a class="research-link-button" href="https://research-portal.uu.nl/ws/portalfiles/portal/266197286/thesis%20-%20684ee48bb78b1.pdf" target="_blank" rel="noopener noreferrer">Read thesis</a>
+                  <a class="research-link-button research-link-button-secondary" href="https://github.com/wuyuyu1024/RAG_thesis" target="_blank" rel="noopener noreferrer">View repo</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
 
         <h2 id="publications" style="padding-bottom: 20px">Selected Publications</h2>
         <ul class="list-unstyled">

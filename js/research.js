@@ -1,47 +1,56 @@
-// Add an event listener to the image to open a modal when clicked
+const researchModalTriggers = document.querySelectorAll('.js-research-modal');
 
-const work_flow_img = document.getElementById('workflow-img');
+if (researchModalTriggers.length > 0) {
+  const modal = document.createElement('div');
+  modal.className = 'modal';
+  modal.id = 'research-modal';
 
+  const modalContent = document.createElement('div');
+  modalContent.className = 'modal-content research-modal-content';
 
+  const closeButton = document.createElement('button');
+  closeButton.className = 'research-modal-close';
+  closeButton.type = 'button';
+  closeButton.setAttribute('aria-label', 'Close enlarged research figure');
+  closeButton.innerHTML = '&times;';
 
-const research_div = document.getElementById('research')
+  const modalImage = document.createElement('img');
+  modalImage.className = 'img-fluid';
+  modalImage.style.width = '100%';
+  modalImage.style.height = 'auto';
 
-// add modal
-const modal = document.createElement('div');
-modal.className = 'modal';
-modal.id = 'workflow_modal';
+  const caption = document.createElement('p');
 
-const modal_content = document.createElement('div');
-modal_content.className = 'modal-content';
-modal_content.style.width = '40%';
+  modalContent.appendChild(closeButton);
+  modalContent.appendChild(modalImage);
+  modalContent.appendChild(caption);
+  modal.appendChild(modalContent);
+  document.body.appendChild(modal);
 
-// the main image or video
-const main1 = document.createElement('img');
-main1.className = 'img-fluid';
-main1.src = work_flow_img.src;
-main1.style.width = '100%';
-main1.style.height = 'auto';
+  function closeResearchModal() {
+    modal.style.display = 'none';
+  }
 
-const caption = document.createElement('p');
-caption.innerHTML = 'General workflow of decision map techniques. Figure from <a href="http://webspace.science.uu.nl/~telea001/uploads/PAPERS/Inf23/paper.pdf" target="_blank">Wang et al., 2023</a>.';
+  researchModalTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      modalImage.src = trigger.dataset.modalSrc || '';
+      modalImage.alt = trigger.dataset.modalAlt || '';
+      caption.innerHTML = trigger.dataset.modalCaption || '';
+      modal.style.display = 'block';
+    });
+  });
 
+  closeButton.addEventListener('click', closeResearchModal);
 
-modal_content.appendChild(main1);
-modal_content.appendChild(caption);
-modal.appendChild(modal_content);
-research_div.appendChild(modal);
-
-modal.addEventListener('click', (event) => {
+  modal.addEventListener('click', (event) => {
     if (event.target === modal) {
-      modal.style.display = "none";
-        stopVideo(modal);
+      closeResearchModal();
     }
-    }
-);
+  });
 
-work_flow_img.addEventListener('click', () => {
-    console.log('clicked');
-    const modal = document.getElementById('workflow_modal');
-    modal.style.display = "block";
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && modal.style.display === 'block') {
+      closeResearchModal();
     }
-);
+  });
+}
