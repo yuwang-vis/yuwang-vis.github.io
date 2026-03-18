@@ -2,14 +2,16 @@ var typeWriterElement = document.getElementById('app');
 
 // List of strings to display in turn
 var textArray = [
-  'I am a computers scientist.',
-  'My research focuses on visualization for AI.',
+  'I am a computer scientist.',
+  'I am also a software developer.',
+  'I build visual analytics and interactive AI tools.',
+  'My background spans research and software engineering.',
+  'I am interested in agentic AI, RAG, and explainable ML.',
   'I am also a gemologist and jewellery appraiser.',
-  'I like Art.',
 ];
 
 // Initialize Typewriter with loop
-var typewriter = new Typewriter(app, {
+var typewriter = new Typewriter(typeWriterElement, {
   loop: false, // Disable looping in the Typewriter instance
   delay: 75,
 });
