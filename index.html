@@ -219,6 +219,39 @@
               </div>
             </article>
 
+            <article class="research-card">
+              <div class="research-media research-media-shell" aria-hidden="true">
+                <div class="research-shell-window">
+                  <div class="research-shell-chrome">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="research-shell-body">
+                    <p><span class="research-shell-prompt">$</span>uv run ai "show me which process is using port 3000"</p>
+                    <p><span class="research-shell-label">thinking</span>pick a single OS-appropriate command and keep it safe to review</p>
+                    <p class="research-shell-command">lsof -i :3000</p>
+                    <p><span class="research-shell-label">execute?</span>[Y/n]</p>
+                  </div>
+                </div>
+              </div>
+              <div class="research-card-body">
+                <p class="research-card-kicker">Applied AI tooling</p>
+                <h4>shell_ai</h4>
+                <p>Minimal local shell agent that turns natural-language requests into a single command, prints a short reasoning trace, and asks for confirmation before running anything on the host machine.</p>
+                <p class="research-inline-code"><code>uv run ai "find the 20 largest files in this directory"</code></p>
+                <div class="research-tag-row">
+                  <span class="research-tag">Python</span>
+                  <span class="research-tag">pydantic-ai</span>
+                  <span class="research-tag">Gemini</span>
+                  <span class="research-tag">CLI</span>
+                </div>
+                <div class="research-links">
+                  <a class="research-link-button" href="https://github.com/wuyuyu1024/shell_ai" target="_blank" rel="noopener noreferrer">View repo</a>
+                </div>
+              </div>
+            </article>
+
             <article class="research-card research-card-accent">
               <div class="research-card-body">
                 <!-- <div class="research-icon-block" aria-hidden="true">

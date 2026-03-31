@@ -232,12 +232,93 @@ p {
   background: linear-gradient(135deg, #eceff1 0%, #f7f8f9 100%);
 }
 
+.research-media-shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background:
+    radial-gradient(circle at top left, rgba(115, 143, 172, 0.45) 0%, rgba(115, 143, 172, 0) 34%),
+    linear-gradient(135deg, #29323c 0%, #0f1115 68%, #08090b 100%);
+}
+
 .research-media img,
 .research-media video {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+}
+
+.research-shell-window {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(6, 10, 14, 0.92);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.26);
+}
+
+.research-shell-chrome {
+  display: flex;
+  gap: 8px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.research-shell-chrome span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.research-shell-chrome span:nth-child(1) {
+  background: #ff8e8e;
+}
+
+.research-shell-chrome span:nth-child(2) {
+  background: #ffd37a;
+}
+
+.research-shell-chrome span:nth-child(3) {
+  background: #8fd59d;
+}
+
+.research-shell-body {
+  display: grid;
+  gap: 10px;
+  padding: 18px 16px 20px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #d8e1ea;
+}
+
+.research-shell-body p {
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.research-shell-prompt {
+  margin-right: 6px;
+  color: #7dd3fc;
+}
+
+.research-shell-label {
+  margin-right: 8px;
+  color: #f7c97d;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.research-shell-command {
+  color: #9ae6b4;
+  word-break: break-word;
 }
 
 .research-card-body {
