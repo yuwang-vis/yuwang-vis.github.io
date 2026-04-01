@@ -1,7 +1,7 @@
 #canvas-image-blending {
   position: absolute;
   width: 100%;
-  height: 750px;
+  height: 100%;
   top: 0;
   right: 0;
   bottom: 0;
@@ -10,12 +10,11 @@
   /* animation: scrollImage 10s linear infinite; */
 }
 
-.cover {
-  overflow: hidden;
-}
-
 :root {
   --nav-anchor-offset: 40px;
+  --banner-height: 400px;
+  --banner-content-offset: 150px;
+  --banner-bottom-gap: 66px;
   --research-bg: #f3f4f5;
   --research-panel: #fcfcfb;
   --research-border: rgba(26, 27, 27, 0.1);
@@ -27,6 +26,39 @@
 
 html {
   scroll-padding-top: var(--nav-anchor-offset);
+}
+
+header {
+  position: relative;
+  height: var(--banner-height);
+}
+
+.main-content {
+  position: absolute;
+  inset: 0 0 auto 0;
+  width: 100%;
+  text-align: center;
+}
+
+.cover {
+  position: relative;
+  height: var(--banner-height);
+  overflow: hidden;
+}
+
+.cover-title {
+  margin: 0;
+  padding-top: var(--banner-content-offset);
+  color: white;
+}
+
+.cover-subtitle {
+  margin-top: 16px;
+  color: white;
+}
+
+.page-content {
+  padding-top: var(--banner-bottom-gap);
 }
 
 #about,
@@ -699,6 +731,9 @@ p {
 @media only screen and (max-width: 550px) and (min-width: 200px){
   :root {
     --nav-anchor-offset: 120px;
+    --banner-height: 340px;
+    --banner-content-offset: 132px;
+    --banner-bottom-gap: 48px;
   }
 
   .container-fluid {
