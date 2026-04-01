@@ -2,9 +2,8 @@ var typeWriterElement = document.getElementById('app');
 
 // List of strings to display in turn
 var textArray = [
-  'I am a computer scientist.',
-  'I am also a software engineer.',
-  'I am a AI engineer.',
+  'I am a software engineer.',
+  'I am also a AI engineer.',
   'I build visual analytics and interactive AI tools.',
   'I am interested in agentic AI, RAG, and explainable ML.',
   'I am also a gemologist and jewellery appraiser.',
