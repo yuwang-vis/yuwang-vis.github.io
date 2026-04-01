@@ -10,57 +10,63 @@ var textArray = [
   'I am also a gemologist and jewellery appraiser.',
 ];
 
-// Initialize Typewriter with loop
-var typewriter = new Typewriter(typeWriterElement, {
-  loop: false, // Disable looping in the Typewriter instance
-  delay: 75,
-});
+var fullTextHoldMs = 500;
+var betweenTextDelayMs = 100;
+var initialCycle = true;
 
 function delWriter(text, i, cb) {
 	if (i >= 0 ) {
-		typeWriterElement.innerHTML = text.substring(0, i--);
+		typeWriterElement.textContent = text.substring(0, i--);
 		// generate a random Number to emulate backspace hitting.
- 		var rndBack = 10 + Math.random() * 100;
+ 		var rndBack = 50 + Math.random() * 100;
 		setTimeout(function() {
 			delWriter(text, i, cb);
 		},rndBack); 
 	} else if (typeof cb == 'function') {
-		setTimeout(cb,1000);
+		setTimeout(cb, betweenTextDelayMs);
 	}
 };
 
-// function to generate the keyhitting effect
+function showWriter(text, cb) {
+	typeWriterElement.textContent = text;
+	setTimeout(function() {
+		delWriter(text, text.length, cb);
+	}, fullTextHoldMs);
+}
+
 function typeWriter(text, i, cb) {
-	if ( i < text.length+1 ) {
-		typeWriterElement.innerHTML = text.substring(0, i++);
-		// generate a random Number to emulate Typing on the Keyboard.
+	if (i < text.length + 1) {
+		typeWriterElement.textContent = text.substring(0, i);
 		var rndTyping = 150 - Math.random() * 100;
-		setTimeout( function () { 
-			typeWriter(text, i++, cb)
-		},rndTyping);
-	} else if (i === text.length+1) {
-		setTimeout( function () {
-			delWriter(text, i, cb)
-		},1000);
+		setTimeout(function() {
+			typeWriter(text, i + 1, cb);
+		}, rndTyping);
+	} else if (typeof cb == 'function') {
+		setTimeout(function() {
+			delWriter(text, text.length, cb);
+		}, fullTextHoldMs);
 	}
-};
+}
 
 // the main writer function
 function StartWriter(i) {
 	if (typeof textArray[i] == "undefined") {
+		initialCycle = false;
 		setTimeout( function () {
 			StartWriter(0)
-		},1000);
-	} else if(i < textArray[i].length+1) {
-		typeWriter(textArray[i], 0, function () {
+		},betweenTextDelayMs);
+	} else if (initialCycle && i === 0) {
+		showWriter(textArray[i], function () {
 			StartWriter(i+1);
 		});
-	}  
+	} else {
+		typeWriter(textArray[i], 0, function () {
+			StartWriter(i+1);
+		});
+	}
 };
-// wait one second then start the typewriter
-setTimeout( function () {
-	StartWriter(0);
-},1000);
+
+StartWriter(0);
 	
 
 // cover image
